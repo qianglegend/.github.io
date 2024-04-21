@@ -1,0 +1,1231 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>项目管理案例分析 | 归去来兮</title><meta name="author" content="vhql"><meta name="copyright" content="vhql"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="万金油  技术人员：开发和管理是两条主线，技能不一样，角色定位不同，技术人员没有站在项目经理角度管理项目，需要进行培训。 身兼数职：项目经理没有时间和精力去学习新的知识，精力不足，工作负荷过载，身心疲惫，压力比较大，给项目带来不利影响。 新技术：要先给开发人员进行培训，存在风险，需要监控技术风险。或者找到合适的人从事这项工作，实在不行就进行外包。 有人对项目不满意：没有建立有效的沟通方式，方法。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="项目管理案例分析">
+<meta property="og:url" content="https://cn-vhql.github.io/2024/04/16/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/index.html">
+<meta property="og:site_name" content="归去来兮">
+<meta property="og:description" content="万金油  技术人员：开发和管理是两条主线，技能不一样，角色定位不同，技术人员没有站在项目经理角度管理项目，需要进行培训。 身兼数职：项目经理没有时间和精力去学习新的知识，精力不足，工作负荷过载，身心疲惫，压力比较大，给项目带来不利影响。 新技术：要先给开发人员进行培训，存在风险，需要监控技术风险。或者找到合适的人从事这项工作，实在不行就进行外包。 有人对项目不满意：没有建立有效的沟通方式，方法。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:published_time" content="2024-04-16T08:08:52.000Z">
+<meta property="article:modified_time" content="2024-04-21T13:37:04.118Z">
+<meta property="article:author" content="vhql">
+<meta property="article:tag" content="项目管理">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://cn-vhql.github.io/2024/04/16/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '项目管理案例分析',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-04-21 21:37:04'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">28</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="归去来兮"><span class="site-name">归去来兮</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">项目管理案例分析</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-04-16T08:08:52.000Z" title="发表于 2024-04-16 16:08:52">2024-04-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-04-21T13:37:04.118Z" title="更新于 2024-04-21 21:37:04">2024-04-21</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="项目管理案例分析"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h3 id="万金油"><a class="markdownIt-Anchor" href="#万金油"></a> 万金油</h3>
+<ol>
+<li>技术人员：开发和管理是两条主线，技能不一样，角色定位不同，技术人员没有站在项目经理角度管理项目，需要进行培训。</li>
+<li>身兼数职：项目经理没有时间和精力去学习新的知识，精力不足，工作负荷过载，身心疲惫，压力比较大，给项目带来不利影响。</li>
+<li>新技术：要先给开发人员进行培训，存在风险，需要监控技术风险。或者找到合适的人从事这项工作，实在不行就进行外包。</li>
+<li>有人对项目不满意：没有建立有效的沟通方式，方法。缺乏有效的项目绩效管理机制，需要加强沟通。</li>
+<li>变更：需要书面申请，审批和确认，跟踪变更过程。</li>
+<li>由客户验收不通过：验收标准没有得到认可和确认，没有验收测试规范和方法。</li>
+<li>与人有关的问题：沟通方面存在问题，沟通不到位。</li>
+<li>过了一段时间才发现：项目监控不力。</li>
+<li>里程碑或一些时间做的很紧促：没有考虑冗余设计，没有考虑风险；</li>
+<li>外部因素导致项目延期：没有考虑到外部因素的影响；</li>
+<li>争执：沟通存在问题，计划不周密；</li>
+<li>多头汇报：组织结构不对，项目经理权利不足；</li>
+<li>计划：评审，确认，全员参与；</li>
+<li>基本，简单，匆忙：流于形式，写得不够详细；</li>
+<li>核心参与：要全员参与；</li>
+<li>加人减人：人力资源规划不充分；</li>
+<li>修改调整变更：配置和变更流程</li>
+<li>第一次：人力资源，要学习，要培训；</li>
+<li>新毕业：说明没有经验，需要学习</li>
+<li>口头：需要书面，口头不正式；</li>
+<li>认为：缺少分析或者分析依据过于单一</li>
+<li>加班：计划不周全，资源不充分</li>
+<li>修改：计划编制不合理，变更流程；</li>
+<li>过度承诺：沟通没有做好，没有注意实际情况，没有考虑风险；</li>
+<li>评审和确认：评审阶段很重要</li>
+<li>XX是老客户：后面可能会出问题</li>
+<li>进度不好：检查点，基线，里程碑</li>
+<li>频繁出现变更：加强与客户沟通，争取客户对项目范围，需求，设计，验收标准进行确认</li>
+<li>返工：加强对交付物，阶段工作的及时检查和控制</li>
+<li>不熟悉的技术：培训学习，潜在风险，考虑外包</li>
+<li>人手紧张：资源规划不合理</li>
+<li>有变更直接修改：变更控制流程</li>
+<li>客户问题似乎不断：需求，范围蔓延</li>
+<li>老提之前已经提出过的问题：文档配置管理不完善</li>
+<li>成员开始争吵：团队建设没有做好，没做好沟通</li>
+<li>简单的写了几条合同内容：签订管理没有做好，必须写详细</li>
+<li>某某离职：ab备岗，注意团队激励</li>
+<li>有人对项目不满意：多沟通多交流</li>
+<li>开会人员没有来齐：项目经理缺少权威</li>
+<li>员工汇报言过其实：奖惩机制不明确</li>
+<li>直到什么时候才发现问题：项目监控不力</li>
+<li>根据自己的经验编写什么东西：要适合项目实际情况</li>
+<li>做计划时倒推日期：这个是最迟时间，风险很大</li>
+<li>推诿扯皮：职责不明，沟通没有做好</li>
+<li>改了若干错别字，匆忙通过计划：流于形式，敷衍应付</li>
+<li>需求文件：需要评审，需要甲方签字或者修改意见</li>
+<li>分了几个小组分别开发：注意沟通协调</li>
+<li>并行施工：会增加风险</li>
+<li>参考别的项目写了文件：要结合本项目</li>
+<li>项目经理亲自动手做技术：项目经理职责是管理</li>
+<li>项目经理发布章程：项目经理不能发布章程</li>
+<li>一个人写了XX计划：需要全员参与</li>
+<li>背景里详细的罗列的XXX等东西：东西不全</li>
+<li>马上去做：需要得到确认后再做</li>
+<li>有XX文档：需要经过评审</li>
+<li>外包商：平时多沟通多交流</li>
+<li>初步了解什么东西：需要详细了解</li>
+<li>重新招聘人员：人力不够，需要注意新人的磨合，需要注意培训</li>
+<li>时间安排非常紧张：说明没有冗余</li>
+<li>取消周会：说明监控粒度变粗了</li>
+<li>必须严格按照XX计划执行：不显示，不可能没有偏差</li>
+<li>版本很多，不知道如何应对：文档配置没有做好</li>
+<li>一个人做了风险识别：需要全员参与</li>
+<li>CCB是作业机构：CCB是决策机构</li>
+<li>项目经理同意了变更：可能需要CCB来决策</li>
+<li>开发进行测试：应该需要专业测试人员，或者进行交叉测试</li>
+<li>重新招聘人员：人力不够，招人后需要磨合和重新培训</li>
+<li>工期紧张，取消了一些流程：需要走完整的流程</li>
+<li>签订了XX合同：分析条件，判断是否可以这样签合同</li>
+<li>招标文件：看看是否应该是投标文件</li>
+<li>国外的公司：注意政策法规</li>
+<li>做了初步可行性研究：看看有没有做详细可行性分析</li>
+<li>配置库：三个库，开发库，受控库，产品库</li>
+<li>简单的写了XX计划：要尽力编写详细的计划</li>
+<li>成员怕项目经理不高兴，不敢提意见：说明项目经理是X理论，氛围死板</li>
+<li>项目建议书：看是谁写的，谁报批的</li>
+<li>项目经理怕甲方不高兴，不敢汇报项目情况：说明沟通管理存在问题</li>
+<li>计划跟不上项目实际情况：说明没有对计划进行更新</li>
+<li>政府采购：注意采购方式是否合规</li>
+<li>分包：注意分包条件，是否经过同意，非主体，非关键，资质，再次分包等</li>
+<li>全权让别人做XX：不能全权让其它人来做</li>
+<li>采用了瀑布模型：分析是否合适瀑布模型</li>
+<li>投标人会议、踏勘项目现场：注意是否是全部潜在的供应商</li>
+<li>招投标法、政府采购法：注意一些数字是否准确</li>
+<li>项目经理不知道怎么办：缺少PMO或公司高层的支持</li>
+<li>团队成员不知道怎么办：说明没有经过培训，缺少相关的意识</li>
+<li>联合体投标：分析资质是否满足要求</li>
+<li>有冲突，没有解决好，事情停滞不前：冲突管理存在问题</li>
+<li>一些沟通方式，沟通频率：注意方式，频率是否正确</li>
+<li>罗列了一些干系人：干系人是否罗列完整</li>
+<li>删除了旧版本：注意文档的积累</li>
+<li>团队成员消极怠工：说明没有做好建设和激励</li>
+<li>虚拟团队：说明下缺点，需要多沟通</li>
+<li>WBS分解：注意分解时有没有遵循相关的原则和注意事项</li>
+<li>选择报价最低的供应商：选择的标准可能不对，后面会存在问题</li>
+<li>与甲方争吵：沟通管理，干系人管理没有做好</li>
+<li>自学了XX东西：需要系统的学习和培训</li>
+<li>在做XX过程时，采用了XX工具：采用的工具可能比较单一</li>
+<li>根据员工是否闲着、兴趣来组建团队：需要根据项目的实际情况来选择团队成员</li>
+<li>奖励：一定要注意有没有惩罚，要奖惩分明</li>
+</ol>
+<hr />
+<h3 id="立项管理"><a class="markdownIt-Anchor" href="#立项管理"></a> 立项管理</h3>
+<ol>
+<li>项目立项一般包含项目建议和立项申请，项目可行性研究，项目评估和决策</li>
+<li>项目建议书的内容：项目的必要性；项目的市场预测；项目的预期成果；项目建设的必须条件；</li>
+<li>项目建议书的作用：项目建议书是项目发展周期的初始阶段，是国家或上级部门选择项目的依据，也是可行性研究的依据。</li>
+<li>信息系统项目的可行性研究包含：技术可行性分析；经济可行性分析；社会效益可行性分析；运行环境可行性分析；其他方面可行性分析；</li>
+<li>项目评估依据主要包括：项目建议书和其批准文件；项目的可行性研究报告；报送组织的申请报告及主管部门的初审意见；项目关键建设条件和工程等协议文件；必须的其他文件和资料；</li>
+</ol>
+<hr />
+<h3 id="整合管理"><a class="markdownIt-Anchor" href="#整合管理"></a> 整合管理</h3>
+<ol>
+<li>
+<p>整合管理可能存在的问题：</p>
+<ol>
+<li>未制定项目章程（项目章程未审批）</li>
+<li>项目经理未得到授权，未能确定项目高层的范围和目标</li>
+<li>没有制定项目管理计划或者项目管理计划不周全</li>
+<li>计划应该大家一起参与，不能由项目经理一个人制作</li>
+<li>计划没有经过评审和批准</li>
+<li>没有项目管理的知识过程</li>
+<li>没有形成经验教训登记册</li>
+<li>管理项目知识没有合理运用相关的工具和技术</li>
+<li>没有做好项目监控工作，未能及时对比分析计划和实际执行情况</li>
+<li>对问题没有做到及时的监控和分析，未能及时提出纠正、预防、缺陷补救措施</li>
+<li>没有制定合理的整体变更流程</li>
+<li>项目已经变更，计划和基准没有更新</li>
+<li>没有做好项目收尾工作，没有及时总结经验教训</li>
+</ol>
+</li>
+<li>
+<p>项目章程的内容：项目章程记录了关于项目预期交付的产品、服务或成果的高层级信息；</p>
+<ol>
+<li>项目目的</li>
+<li>可测量的项目目标和相关的成功标准</li>
+<li>整体项目风险</li>
+<li>总体里程碑和进度计划</li>
+<li>预先批准的财务资源</li>
+<li>关键干系人名单</li>
+<li>项目审批要求</li>
+<li>项目的退出标准</li>
+<li>委派的项目经理的职责和职权</li>
+<li>发起人或其他批准项目章程的人员的姓名和职权</li>
+</ol>
+</li>
+<li>
+<p>项目章程的作用：</p>
+<ol>
+<li>明确项目与组织战略目标之间的直接联系</li>
+<li>确立项目的正式地位</li>
+<li>展示组织对项目的承诺</li>
+</ol>
+</li>
+<li>
+<p>项目管理计划组件主要包括</p>
+<ol>
+<li>子管理计划：范围管理计划；需求管理计划；进度管理计划；成本管理计划；质量管理计划；资源管理计划；沟通管理计划；风险管理计划；采购管理计划；干系人管理计划；</li>
+<li>基准：范围基准；进度基准；成本基准</li>
+<li>其他组件：变更管理计划；配置管理计划；绩效测量基准；项目生命周期；开发方法；管理审查；</li>
+</ol>
+</li>
+<li>
+<p>整合管理中涉及的配置管理活动包括：识别配置项；记录并报告配置项状态；进行配置项核实和审计；</p>
+</li>
+<li>
+<p>整合管理中涉及的变更管理活动包括：识别变更、记录变更、做出变更决定、跟踪变更；</p>
+</li>
+<li>
+<p>结束项目或阶段过程需要执行的活动包括：</p>
+<ol>
+<li>为达到阶段或项目的完工或退出标准所必须的行动和活动；</li>
+<li>为关闭项目合同协议或项目阶段合同协议所必须开展的活动；</li>
+<li>为完成收集项目或阶段记录、审计项目成败、管理项目知识分享和传递、总结经验教训、存档项目信息以供组织未来使用等工作所必须开展的活动；</li>
+<li>为向下一阶段，或者向生产和运营部门移交项目的产品、服务或成果所必须开展的行动和活动；</li>
+<li>收集关于改进或更新组织政策和程序的建议，并将它们发送给相应的组织部门；</li>
+<li>测量干系人的满意程度；</li>
+</ol>
+</li>
+<li>
+<p>整合管理7个过程/归属5大过程组</p>
+<ol>
+<li>制定项目章程（启动）</li>
+<li>制定项目管理计划（计划）</li>
+<li>指导与管理项目工作（执行）</li>
+<li>管理项目知识（执行）</li>
+<li>监控项目工作（监控）</li>
+<li>实施项目整体变更（监控）</li>
+<li>结束项目或阶段（收尾）</li>
+</ol>
+</li>
+</ol>
+<hr />
+<h3 id="范围管理"><a class="markdownIt-Anchor" href="#范围管理"></a> 范围管理</h3>
+<ol>
+<li>
+<p>范围管理过程中存在的问题</p>
+<ol>
+<li>没有制定范围管理计划和需求管理计划</li>
+<li>没有做好需求收集、分析、调研工作</li>
+<li>没有做好需求跟踪工作</li>
+<li>不能仅依据过去的经验来编写现在项目的范围说明书等工作</li>
+<li>项目范围说明书内容不全面或者项目范围定义不充分</li>
+<li>项目范围说明书不应该由项目经理一个人来写</li>
+<li>WBS及范围基准应该让项目团队和所有关键干系人一起来创建，而不是项目经理创建，导致工作遗漏；</li>
+<li>项目范围基准未经评审和审批；</li>
+<li>缺少范围确认等环节，项目成果等没有得到用户的正式确认和接受；</li>
+<li>范围变更没有规范的变更控制流程；</li>
+<li>项目变更实施前没有及时变更合同</li>
+<li>变更结果没有得到客户的确认</li>
+<li>没有做好范围控制工作，没有对范围管理中的偏差和问题进行及时纠偏</li>
+</ol>
+</li>
+<li>
+<p>需求管理可能存在的问题</p>
+<ol>
+<li>对客户（用户）的需求获取不充分</li>
+<li>没有按照规范的需求开发与需求管理的流程及内容开展需求工作</li>
+<li>缺乏需求定义环节，没有定义出需求规格说明书</li>
+<li>缺乏需求验证环节，没有请客户代表一起进行需求评审</li>
+<li>没有制定范围和需求管理计划</li>
+<li>没有求得干系人对需求的一致理解</li>
+<li>没有求得干系人对需求的承诺</li>
+<li>没有有效地管理需求变更控制</li>
+<li>没有有效维护对需求进行跟踪管理</li>
+<li>没有及时识别项目工作与需求之间的不一致性</li>
+</ol>
+</li>
+<li>
+<p>需求管理问题应对措施</p>
+<ol>
+<li>建立需求变更控制策略和需求变更控制流程</li>
+<li>采用多种方式充分获取用户需求并进行详细的需求分析</li>
+<li>形成需求规格说明书并与用户进行需求验证（确认）和评审</li>
+<li>需求定稿建立基线，以后的需求变更必须走变更控制流程，并及时更新需求规格说明书和需求跟踪矩阵</li>
+<li>编写需求跟踪矩阵，需求状态表等文档</li>
+<li>在需求规格说明书基础上编制技术方案，并进行评审</li>
+<li>定期不定期对项目绩效进行监督检查，找出问题原因并指导团队成员解决</li>
+</ol>
+</li>
+<li>
+<p>范围说明书的内容</p>
+<ol>
+<li>产品范围描述</li>
+<li>验收标准</li>
+<li>可交付成果</li>
+<li>项目的除外责任</li>
+<li>制约因素</li>
+<li>假设条件</li>
+</ol>
+</li>
+<li>
+<p>WBS的分解方法</p>
+<ol>
+<li>以项目生命周期各阶段作为分解的第二层，产品和项目可交付成果放在第三层</li>
+<li>以主要可交付成果作为分解的第二层</li>
+<li>纳入由项目团队以外的组织开发的各种较低层次组件（如外包工作）。随后，作为外包工作的一部分，卖方必须制定相应的合同WBS</li>
+</ol>
+</li>
+<li>
+<p>WBS表现形式主要有分级的树形结构（组织结构）和表格形式（列表式）</p>
+<p>树形结构层次清晰，直观性和结构性强，但不容易修改，对大的，复杂的项目很难表示出项目的全貌；</p>
+<p>表格形式的直观性比较差，但是可以反映出项目的所有工作要素；</p>
+</li>
+<li>
+<p>分解工作结构应该把握如下原则</p>
+<ol>
+<li>WBS必须是面向可交付成果的</li>
+<li>WBS必须符合项目的范围</li>
+<li>WBS的底层应该支持计划和控制</li>
+<li>WBS中的元素必须有人负责，而且只能由一个人负责，尽管可能需要多人参与</li>
+<li>WBS的指导，WBS应该控制在4~6层</li>
+<li>WBS应该包括项目管理工作，也要包括分包出去的工作</li>
+<li>WBS的编制需要所有项目干系人的参与，需要项目团长成员的参与</li>
+<li>WBS并非是一成不变的。在完成了WBS之后的工作，仍然有可能需要对WBS进行修改</li>
+</ol>
+</li>
+<li>
+<p>需求跟踪矩阵中记录的典型属性有哪些</p>
+<p>唯一标识，需求的文字描述，收录该需求的理由，所有者，来源，优先级别，版本，当前状态和状态日期。为了确保干系人满意，可能需要增加一些补充属性，如稳定性，复杂性和验收标准。</p>
+</li>
+<li>
+<p>跟踪需求的内容包括</p>
+<ol>
+<li>业务需求，机会，目的和目标</li>
+<li>项目目标</li>
+<li>项目范围和WBS可交付成果</li>
+<li>产品设计</li>
+<li>产品开发</li>
+<li>测试策略和测试场景</li>
+<li>高层及需求到详细需求等</li>
+</ol>
+</li>
+<li>
+<p>项目的范围基准是经过批准的项目范围说明书，WBS和WBS词典。项目范围的完成情况是根据项目管理计划来衡量的。产品范围的完成情况是根据产品需求的衡量的。</p>
+</li>
+<li>
+<p>WBS分解步骤</p>
+<ol>
+<li>识别和分析可交付成果和相关工作</li>
+<li>确定WBS的结构和编排方法</li>
+<li>自上向下逐层细化分解</li>
+<li>为WBS组件定制和分配标识编码</li>
+<li>核实可交付成果分解的程度是否恰当</li>
+</ol>
+</li>
+</ol>
+<hr />
+<h3 id="进度管理"><a class="markdownIt-Anchor" href="#进度管理"></a> 进度管理</h3>
+<ol>
+<li>
+<p>进度管理可能存在的问题</p>
+<ol>
+<li>团队成员没有及早参与，需求分析耗时长；</li>
+<li>经验不足，进度计划制定不准，没有采取有效的历史估算方法和网络计划技术，制定进度计划；</li>
+<li>考虑项目期间特定时期会对进度产生影响</li>
+<li>在安排进度时未考虑法定节假日的因素</li>
+<li>仅仅依靠某项目来估算项目的历时根据不充分</li>
+<li>没有对项目的技术方案、管理计划进行详细的评审、需求没有经过确认</li>
+<li>增加人员经验不足，沟通存在问题，加班使得人员的工作效率降低</li>
+</ol>
+</li>
+<li>
+<p>项目进度出现问题的解决方案</p>
+<ol>
+<li>向公司申请增加资源，或使用经验丰富的员工</li>
+<li>优化网络图，重排活动顺序，压缩关键路径的长度</li>
+<li>临时加班（赶工），尽可能补救耽误的时间或提升资源的利用效率</li>
+<li>将部分阶段的工作改为并行，内部流程优化</li>
+<li>变更原来的进度计划，根据前阶段的绩效，对后续工作重新估计，修订计划，并获得项目干系人的同意</li>
+<li>加强同项目干系人的沟通</li>
+<li>加强对交付物、项目阶段工作的及时检查和控制，避免后面出现返工；</li>
+<li>尽可能调配非关键路径上的资源用于关键路径上的任务</li>
+<li>优化外包，采购等环节并全程监控</li>
+</ol>
+</li>
+<li>
+<p>缩短活动的工期</p>
+<ol>
+<li>赶工：投入更多的资源或者增加工作时间，以缩短关键活动的工期</li>
+<li>快速跟进，并行施工，以缩短关键路径的长度</li>
+<li>使用高素质的资源或经验更丰富的人员</li>
+<li>减小活动范围或降低活动要求</li>
+<li>改进技术方法或技术，以提高生产效率</li>
+<li>加强质量管理，及时发现问题：减少返工，从而缩短工期</li>
+</ol>
+</li>
+<li>
+<p>进度压缩技术有哪些</p>
+<ol>
+<li>赶工：通过增加资源，以最小的成本代价来压缩进度工期的一种技术。赶工仅适用于通过增加资源就能缩短持续时间的且位于关键路径的活动。赶工并非总是切实可行的，可能导致风险或者成本的增加。</li>
+<li>快速跟进：将正常情况下按照顺序进行的活动或阶段改为至少是部分并行开展。快速跟进可能造成返工和风险增加，所以它只适用于通过并行活动来缩短关键路径上的项目工期的情况。可能增加质量风险和项目成本</li>
+</ol>
+</li>
+<li>
+<p>确定依赖关系</p>
+<ol>
+<li>强制性依赖关系：根据法律或者合同要求的或工作的内在性质决定的依赖关系。</li>
+<li>选择性依赖关系：首选逻辑关系，优先逻辑关系，软逻辑关系</li>
+<li>外部依赖关系：项目活动与非项目活动之间的依赖关系，这些依赖关系往往不在项目团队的控制范围内。</li>
+<li>内部依赖关系：是项目活动之间的紧前关系，通常在项目团队的控制之中。</li>
+</ol>
+</li>
+<li>
+<p>资源优化计划</p>
+<ol>
+<li>资源平衡是为了在资源需求与资源供给之间取得平衡，根据资源制约因素对开始日期和完成日期进行调整的一种技术。资源平衡往往导致关键路径的改变。</li>
+<li>资源平滑是对进度模型中的活动进行调整，从而使项目资源需求不超过预定的资源限制的一种技术。相对资源平衡技术而言，资源平滑不会改变项目的关键路径，完工日期也不会延迟。活动只在其自有和总浮动时间内延迟</li>
+</ol>
+</li>
+<li>
+<p>进度计划包含的种类和用途</p>
+<ol>
+<li>里程碑进度计划，也叫里程碑图</li>
+<li>概括性进度计划，也叫横道图</li>
+<li>详细进度计划，也叫项目进度网络图（单代号网络图，双代号网络图，双代号时标网络图）</li>
+</ol>
+</li>
+<li>
+<p>进度落后，成本超支</p>
+<ol>
+<li>用高效人员替换低效人员</li>
+<li>加班或者赶工在防范风险的前提下并行施工</li>
+<li>减小活动范围或降低活动要求</li>
+<li>通过改进的方法或技术提高生产效率</li>
+<li>分析成本超支原因，再找出针对性的对策如改进方法，优化方案，提高效率</li>
+</ol>
+</li>
+<li>
+<p>进度落后，成本节约</p>
+<ol>
+<li>赶工（例如全体加班方式加快进度）</li>
+<li>使用高效资源来替换低效资源加快进度</li>
+<li>改进方法，提高工作效率</li>
+</ol>
+</li>
+<li>
+<p>进度超前，成本超支</p>
+<ol>
+<li>整个项目需要抽出部分人员以放慢工作进度</li>
+<li>整个项目存在成本超支的现象，需要采取措施节约成本</li>
+<li>项目中区分不同的任务，采用不同的成本和进度措施</li>
+<li>必要时调整成本基准</li>
+<li>优化施工方案，提高效率，加强质量管理减少返工，加强沟通，以降低成本</li>
+<li>在确保进度按期完成的基础上，可以降低进度来节约成本</li>
+<li>总结项目进度提前的经验，并记录下来，把这经验传播到项目的其他班组，甚至其他项目或未来的项目</li>
+</ol>
+</li>
+<li>
+<p>进度超前，成本节约</p>
+<ol>
+<li>抽调部分人员去做其他的项目</li>
+<li>加强质量管理，密切监控项目</li>
+<li>必要时调整计划或基准等方法改进，或者改变项目计划</li>
+</ol>
+</li>
+<li>
+<p>​<img src="https://jsd.cdn.zzko.cn/gh/cn-vhql/picture/picture_bed/202404201212335.png" alt="" /></p>
+<ol>
+<li>SV 进度偏差；2. CV 成本偏差；3. BAC 完工预算；4. VAC 完工偏差； 5. 项目整体拖延日期；6. 项目当前拖延日期；</li>
+</ol>
+</li>
+</ol>
+<hr />
+<h3 id="成本管理"><a class="markdownIt-Anchor" href="#成本管理"></a> 成本管理</h3>
+<ol>
+<li>
+<p>成本估算三个主要步骤</p>
+<ol>
+<li>识别并分析成本的构成科目</li>
+<li>根据已识别的项目成本构成科目，估算每一科目的成本大小</li>
+<li>分析成本估算结果，找出各种可以相互替代的成本，协调各种成本之间的比例关系</li>
+</ol>
+</li>
+<li>
+<p>成本预算的经过步骤</p>
+<ol>
+<li>将项目总成本分摊到项目工作分解结构的各个工作包</li>
+<li>将各个工作包成本再分配到该工作包所包含的各项活动上</li>
+<li>确定各项成本预算支出的时间计划及项目成本预算计划</li>
+</ol>
+</li>
+<li>
+<p>项目成本控制目标包括</p>
+<ol>
+<li>对造成成本基准变更的因素施加影响</li>
+<li>确保所有变更请求都得到及时处理</li>
+<li>当变更实际发生时，管理这些变更</li>
+<li>确保成本支出不超过批准的资金限额，既不超出按时段、按WBS组件，按活动分配的限额，也不超出项目总限额</li>
+<li>监督成本绩效，找出并分析与成本基准之间的偏差</li>
+<li>对照资金支出，监督工作绩效</li>
+<li>防止在成本或资源使用报告中出现未经批准的变更</li>
+<li>向有关干系人报告所有经批准的变更及其相关成本</li>
+<li>设法把预期的成本超支控制在可接受的范围内</li>
+</ol>
+</li>
+<li>
+<p>管理储备不包括在成本基准中，但属于项目总预算和资金需求的一部分，不计入挣值计算</p>
+</li>
+<li>
+<p>成本的类型</p>
+<ol>
+<li>可变成本：随着生产量、工作量或者时间而变的成本叫做可变成本，也叫做变动成本</li>
+<li>固定成本：不随生产量，工作量或者时间的变化而变化的非重复成本</li>
+<li>直接成本：直接可以归属与一个项目工作的成本，由一个项目承担</li>
+<li>间接成本：来自一般管理费用科目或几个项目共同担负的项目成本所分摊给本项目的费用，就形成了项目的间接成本</li>
+<li>机会成本：是利用一定的时间或者资源生产一种商品时，而失去利用这些资源生产最佳替代品的机会就是机会成本，做出选择后其中一项最大损失</li>
+<li>沉没成本：由于过去的决策已经发生了的，不能由现在或者将来的任何决策改变的成本，投资时应该排除沉没成本的干扰</li>
+</ol>
+</li>
+<li>
+<p>应急储备：包含在成本基准内的一部分预算，用来应对已经接受的已识别风险。以及已经制定应急或减轻措施的已识别的风险。应急储备通常是预算的一部分，用来应对那些会影响项目“已知-未知”风险</p>
+</li>
+<li>
+<p>管理储备：是为了管理控制目的特别留出来的一部分预算，用来应对项目中不可预见的风险，管理储备用来应对会影响项目的“未知-未知”的风险。管理储备不包括在成本基准中，但属于项目总预算和资金需求的一部分，使用前需要得到高层管理者审批。</p>
+</li>
+</ol>
+<hr />
+<h3 id="质量管理"><a class="markdownIt-Anchor" href="#质量管理"></a> 质量管理</h3>
+<ol>
+<li>
+<p>质量管理可能遇到的问题</p>
+<ol>
+<li>没有制定质量管理计划</li>
+<li>质量职责分配不合理，没有QA或者QA不独立于项目组</li>
+<li>管理质量活动做的不到位，或未实施管理质量</li>
+<li>质量控制缺少必要的环节（评审，测试）</li>
+<li>质量控制方法不合理，效果不佳（评审，测试）</li>
+<li>没有按照变更流程的要求处理质量标准或验收标准的变更</li>
+<li>项目经理在质量管理方面经验不足或质量保证人员经验不足</li>
+<li>没有建立质量的保证体系</li>
+<li>缺乏质量标准和质量规范</li>
+<li>在质量管理中，没有采用合适的工具，技术和方法</li>
+<li>测试过程中配置管理工作不到位</li>
+<li>项目在重大里程碑处没有设置阶段或者成果评审，无法确保结果和预期目标一致</li>
+<li>技术评审会没有达成预期的目标</li>
+<li>设计文件没有经过正式评审，可能没有发现设计文件的错误</li>
+<li>需求评审没有客户参与或没有做好，可能导致最终对需求不能达成一致</li>
+<li>项目团队成员缺乏质量意识</li>
+<li>与客户沟通存在问题，方式单一，导致用户不必要的担心</li>
+</ol>
+</li>
+<li>
+<p>针对质量问题可以提出的解决措施</p>
+<ol>
+<li>应使用有相关行业经验，项目经验的质量管理经验的质量保证人员</li>
+<li>应科学制定和实施质量管理计划</li>
+<li>重视软件项目的测试环节，安排必要时间，采用合理方法进行充分测试</li>
+<li>应重视软件开发过程中的管理质量工作，采用相应的工具和技术，避免将检查、测试作为项目质量保证的唯一方法</li>
+<li>应加强需求和设计方案的评审和质量控制工作</li>
+<li>应加强项目实施过程中的配置管理</li>
+<li>应建立项目的质量管理体系，包括制定可行的过程规范和质量目标，质量标准</li>
+<li>对发现的缺陷进行统计分析，确保软件质量，提出合理有效的质量整改措施</li>
+<li>为项目组成员提供质量管理要求方面的培训</li>
+<li>加强与客户在质量管理方面的沟通和交流</li>
+</ol>
+</li>
+<li>
+<p>管理质量和控制质量的区别和联系</p>
+<ol>
+<li>管理质量是针对过程改进和审计的，强调的是过程改进和信息保证</li>
+<li>质量控制是按照质量要求，检查具体可交付成果的质量，强调的是具体的可交付成果。</li>
+<li>都是为了保证项目及产品符合质量要求</li>
+<li>管理质量和质量控制都应贯穿项目始终</li>
+<li>管理质量为质量控制提供更好的保证和条件，同时质量控制的测量结果也是管理质量过程的输入</li>
+</ol>
+</li>
+<li>
+<p>确认范围和质量控制的不同之处在于</p>
+<p>从检查的详细程度来看，核实产品，确认范围和质量控制是递进的，越来越细的检查过程</p>
+<ol>
+<li>确认范围主要强调可交付成果获得客户或者发起人的接受，质量控制强调可交付成果的正确性，并符合为其制定的具体质量要求</li>
+<li>质量控制一般在确认范围前进行，也可以同时进行。确认范围一般在阶段末尾进行，而质量控制并不一定在阶段末进行。</li>
+<li>质量控制属于内部检查，由执行组织的相应质量部门实施，确认范围则是由外部干系人（客户或发起人）对项目可交付成果进行检查验收。</li>
+</ol>
+</li>
+<li>
+<p>质量管理计划的内容</p>
+<ol>
+<li>项目采用的质量标准</li>
+<li>项目的质量目标</li>
+<li>质量角色与职责</li>
+<li>需要质量审查的项目可交付成果和过程</li>
+<li>为项目规划的质量控制和质量管理活动</li>
+<li>项目使用的质量工具</li>
+<li>与项目有关的主要程序</li>
+</ol>
+</li>
+<li>
+<p>质量成本</p>
+<p>​<img src="https://jsd.cdn.zzko.cn/gh/cn-vhql/picture/picture_bed/202404201531780.png" alt="" /></p>
+</li>
+<li>
+<p>规划质量管理过程的数据表现技术：流程图，逻辑数据模型，矩阵图，思维导图</p>
+</li>
+<li>
+<p>管理质量的数据表现技术；亲和图、因果图、流程图、直方图、矩阵图、散点图</p>
+</li>
+<li>
+<p>管理质量中数据分析技术：备选方案分析、文件分析、过程分析、根本原因分析</p>
+</li>
+<li>
+<p>质量控制中的数据表现技术：因果图、控制图、直方图、散点图</p>
+</li>
+<li>
+<p>质量控制中的数据收集技术：核对单、核查表、统计抽样、问卷调查</p>
+</li>
+<li>
+<p>质量审计的目标：</p>
+<ol>
+<li>识别全部正在实施的良好及最佳实践</li>
+<li>识别所有违规做法、差距和不足</li>
+<li>分享所在组织和/或行业中类似项目的良好实践</li>
+<li>积极主动的提供协助，以改进过程的执行，从而帮助团队提高生产效率</li>
+<li>强调每次审计都应对组织经验教训知识库的积累做出贡献等</li>
+</ol>
+</li>
+<li>
+<p>帕累托图（排列图）是一种特殊的垂直条形图，用于识别造成大多数问题的少数重要原因，该法则认为：相对来说数据较小的原因往往造成绝大多数的问题或缺陷，因此被称作二八法则。</p>
+</li>
+</ol>
+<hr />
+<h3 id="资源管理"><a class="markdownIt-Anchor" href="#资源管理"></a> 资源管理</h3>
+<ol>
+<li>
+<p>资源管理可能出现的问题</p>
+<ol>
+<li>没有制定资源管理计划</li>
+<li>资源管理计划项目经理一人制定，没有全员参与</li>
+<li>资源管理计划内容不全面，有遗漏</li>
+<li>资源管理计划应该各个干系人参与，而且还需要经过评审</li>
+<li>资源估算过于简单，没有准确评估出项目中团队资源和事物资源</li>
+<li>资源估算内容不全</li>
+<li>资源估算没有采用合适的工具和技术</li>
+<li>团队成员要考虑冗余，防止因为请假造成其他人员超负荷工作</li>
+<li>人员任命存在问题，技术研发能力强的人不一定适合做项目经理</li>
+<li>成员水平参差不齐，项目团队组建人员要按照项目需求实际情况招人</li>
+<li>缺乏团队管理经验，事必躬亲的做法不对</li>
+<li>实物资源采购价格过高，没有进行多方比价</li>
+<li>获得到的资源种类和数量不全</li>
+<li>缺乏足够的项目管理能力和经验</li>
+<li>兼职过多，精力和时间都不够用，顾此失彼</li>
+<li>没有进入管理角色，定位错误，疏于对项目的管理</li>
+<li>新人缺乏培训和全程的跟踪和监控</li>
+<li>没有进行良好的冲突管理</li>
+<li>获取资源出现问题，选人出现问题，没有从工作能力和团队合作精神进行考核</li>
+<li>建设团队出现问题，没有采用有效的团队建设措施</li>
+<li>没有清楚的分配工作职责到个人或者人力单元</li>
+<li>没有对人员进行绩效考评或相应的激励机制</li>
+<li>团队管理存在问题，主要是没有及时发现冲突并分析原因，采取有效的冲突管理</li>
+<li>团队的组成人员尽管富有能力，但缺少合作精神</li>
+<li>团队气氛不积极，造成团队成员士气低落</li>
+<li>项目团队的任务和职责分配不清楚</li>
+<li>人员流动过于频繁</li>
+<li>未制定共同认同并遵守的团队规则</li>
+</ol>
+</li>
+<li>
+<p>资源问题的应对措施</p>
+<ol>
+<li>采用合适的团队建设手段，消除团队成员间的隔阂</li>
+<li>明确项目团队的目标及项目组各成员的分工</li>
+<li>建立清晰的工作流程和沟通机制</li>
+<li>建立明确的考核评价标准</li>
+<li>建立并不断强化项目的目标</li>
+<li>制定并组织规则和纪律</li>
+<li>积极做团队建设活动，保持良好的团队氛围，分享和开放的沟通</li>
+<li>制定有效的激励措施</li>
+</ol>
+</li>
+<li>
+<p>资源管理计划的主要内容</p>
+<p>识别资源，获取资源，角色和职责，项目组织图，项目团队资源管理，培训，团队建设，资源控制，认可计划</p>
+</li>
+<li>
+<p>团队章程是团队创建团队价值观，共识和工作指南的文件。团队章程包括</p>
+<p>团队价值观，沟通指南，决策标准和过程，冲突处理过程，会议指南和团队共识</p>
+</li>
+<li>
+<p>虚拟团队模式使人们有可能</p>
+<ol>
+<li>在组织内部地处不同地理位置的员工之间组建团队</li>
+<li>为项目团队增加特殊技能，即使相应的专家不处于同一地理区域</li>
+<li>将在家办公的员工纳入团队</li>
+<li>在工作班次，工作小时或工作日不同的员工之间组建团队</li>
+<li>将行动不便的人或残疾人纳入团队</li>
+<li>执行那些原本因为差旅费过高而被搁置或取消的项目</li>
+<li>节省员工所需的办公室和所有实物设备的开支</li>
+</ol>
+</li>
+<li>
+<p>团队建设的5个阶段</p>
+<p>形成阶段；震荡阶段；规范阶段；发挥阶段；解散阶段</p>
+</li>
+<li>
+<p>项目经理解决冲突的能力往往决定其管理项目团队的成败。不同项目经理采用不同的解决冲突方法，影响冲突解决方法的因素包含</p>
+<ol>
+<li>冲突的重要性和激烈程度</li>
+<li>解决冲突的紧迫性</li>
+<li>涉及冲突的人员的相对权利</li>
+<li>维持良好关系的重要性</li>
+<li>永久或暂时解决冲突的动机等</li>
+</ol>
+</li>
+<li>
+<p>冲突解决方法，有5种常用的冲突解决方法，每种技巧都有各自的作用和用途</p>
+<p>撤退&amp;回避；缓和&amp;包容；妥协&amp;调节；强迫&amp;命令；合作&amp;解决问题</p>
+</li>
+<li>
+<p>X理论：认为人不好，好逸恶劳，以自我为中心，安于现状，易受人煽动，反对改革，工作动机是为了获得经济报酬；</p>
+</li>
+<li>
+<p>Y理论：认为人好，热爱工作，自我控制，愿意主动承担责任，有创造力，渴望发挥才能；</p>
+</li>
+<li>
+<p>马斯洛的需求层次理论：生理需求；安全需求；社会交往需求；受尊重需求；自我实现的需求；</p>
+</li>
+<li>
+<p>项目经理权利的5种来源：职位权利，专家权利，奖励权利，惩罚权利，参照权利</p>
+</li>
+<li>
+<p>控制资源关注哪些方面</p>
+<ol>
+<li>监督资源的支出</li>
+<li>及时识别和处理资源缺乏/剩余情况</li>
+<li>确保根据计划和项目需求使用并释放资源</li>
+<li>出现资源相关问题时及时通知相关干系人</li>
+<li>影响可以导致资源使用变更的因素</li>
+<li>在变更实际发生的过程中对其进行管理</li>
+</ol>
+</li>
+</ol>
+<hr />
+<h3 id="沟通管理-干系人管理"><a class="markdownIt-Anchor" href="#沟通管理-干系人管理"></a> 沟通管理、干系人管理</h3>
+<ol>
+<li>
+<p>沟通管理可能的问题</p>
+<ol>
+<li>没进行规划沟通管理</li>
+<li>没做管理沟通</li>
+<li>没做监督沟通</li>
+<li>没做干系人识别</li>
+<li>没进行规划干系人参与</li>
+<li>没做管理干系人参与</li>
+<li>没做监督干系人参与</li>
+<li>没有或极少与客户进行直接沟通，合作氛围不够</li>
+<li>没有对团队成员的沟通需求和沟通风格进行分析</li>
+<li>沟通方式单一</li>
+<li>项目执行过程中没有能及时有效的沟通</li>
+<li>沟通管理计划不能由一人制定</li>
+<li>干系人识别不全，遗漏的重要干系人</li>
+<li>没有对沟通情况进行记录</li>
+<li>监督沟通工作做的不好，没有对存在的沟通问题及时进行解决</li>
+<li>沟通管理存在问题，导致客户对项目很不满并进行投诉，并且没有将相关项目绩效数据发送给项目管理办公室</li>
+<li>与客户发生了争执，沟通管理有问题</li>
+<li>独自编制干系人清单不妥</li>
+<li>干系人沟通方式单一</li>
+<li>管理沟通不力，对与员工的诉求，应该私下解决问题，不应该在大会公开说</li>
+<li>监督沟通不力，采取强迫手段中止员工的诉求，导致后续的冲突升级</li>
+<li>与高层沟通不力，未得到高层领导的认同</li>
+<li>月度例会粒度太粗</li>
+<li>甲方没有对各部门的需求进行统一的组织和管理</li>
+<li>缺乏与客户清晰的，统一的接口，与客户沟通不是很有效</li>
+<li>公司其他职能部门支持或者协作不够</li>
+<li>缺乏良好的沟通能力或者沟通技巧</li>
+<li>对项目干系人的需求了解不够细致</li>
+<li>项目缺乏阶段沟通与阶段评审</li>
+</ol>
+</li>
+<li>
+<p>沟通管理主要包括</p>
+<ol>
+<li>干系人的沟通需求</li>
+<li>需沟通的信息，包括语言，形式，内容的详细程度</li>
+<li>上报步骤</li>
+<li>发布信息的原因</li>
+<li>发布所需信息，确认已收到或做出回应的时限和频率</li>
+<li>负责沟通相关信息的人员</li>
+<li>负责授权保密信息发布的人员</li>
+<li>接受信息的人员或群体，包括他们的需要，需求和期望</li>
+<li>用于传递信息的方法和技术，如备忘录，电子邮件，新闻稿，或社交媒体</li>
+<li>为沟通活动分配的资源，包括时间和预算</li>
+<li>随着项目进展而更新与优化沟通管理计划的方法</li>
+<li>通用术语表</li>
+<li>项目信息流向图，工作流程图，报告清单和会议计划等</li>
+<li>来自法律、技术、组织政策等的制约因素</li>
+</ol>
+</li>
+<li>
+<p>影响沟通技术的选择的因素包括</p>
+<ol>
+<li>信息需求的紧迫性：信息传递的紧迫性，频率和形式可能因项目而异，也可能因项目阶段而异</li>
+<li>技术的可用性和可靠性：用于发布项目沟通工件的技术，应该在整个项目中具有兼容性和可得性，对所有项目干系人都适用</li>
+<li>易用性：沟通技术的选择应适合项目参与者，且应在适合的时候安排适当培训活动</li>
+<li>项目环境：团队会议与工作是面对面还是虚拟环境中开展，成员处于一个时区还是多个时区，他们语言是否一致，文化是否影响沟通效率</li>
+<li>信息的敏感性和保密性：需要考虑：拟传递的信息是否是敏感或者机密信息。为员工制定社交媒体政策。</li>
+</ol>
+</li>
+<li>
+<p>沟通方法</p>
+<ol>
+<li>互动沟通：两方或多方的直接进行实施多向信息交换。</li>
+<li>推式沟通：向需要接受信息的特定接收方发送或者发布信息</li>
+<li>拉式沟通：适用于大量复杂信息或大量信息受众的情况。要求受众在遵守相关规定的前提下自定访问相关内容；</li>
+</ol>
+</li>
+<li>
+<p>权利/利益矩阵</p>
+<p>​<img src="https://jsd.cdn.zzko.cn/gh/cn-vhql/picture/picture_bed/202404201808041.png" alt="" /></p>
+</li>
+</ol>
+<hr />
+<h3 id="风险管理"><a class="markdownIt-Anchor" href="#风险管理"></a> 风险管理</h3>
+<ol>
+<li>
+<p>风险管理中存在的常见问题</p>
+<ol>
+<li>编制风险管理计划存在问题，没有结合项目的实际情况编制计划，仅参照以前的项目模版</li>
+<li>编制风险管理计划需要项目团队成员和相关干系人共同参与，并经过充分沟通和评审后才可以发布实施</li>
+<li>缺乏风险识别的过程，没有对风险进行全面识别，以做好后续的风险管理</li>
+<li>缺乏风险的定性和定量分析过程，没有对风险进行详细分析，风险评估和控制缺少依据</li>
+<li>缺乏风险应对规划，没有提前制定好风险的规划应对措施，出现问题时只按照各自理解对风险进行处理，导致项目问题不断</li>
+<li>风险应对措施制定不合理</li>
+<li>实施风险应对效果不理想，监控不到位</li>
+<li>监督风险和应对措施都是按照各个成员各自理解进行安排，应该在充分理解的基础上统一进行风险应对和管控</li>
+<li>没有进行风险再识别</li>
+<li>没有对进度风险及关联影响进行充分评估，在应对进度风险方面没有做好相应的准备和安排，也没有预留储备</li>
+<li>在项目执行过程中，与客户缺乏沟通，会产生很多不必要的项目风险和隐患</li>
+<li>风险管理计划也没有进行追踪检查和更新，没有及时记录和归档</li>
+</ol>
+</li>
+<li>
+<p>风险管理计划包含的内容</p>
+<p>风险管理策略；方法论；角色和职责；资金；时间安排；风险类别；干系人风险偏好；风险概率和影响；概率和影响矩阵；报告格式；跟踪</p>
+</li>
+<li>
+<p>风险应对措施</p>
+<ol>
+<li>消极风险应对：上报，规避，转移，减轻，接受</li>
+<li>积极风险应对：上报，开拓，分享，提高，接受</li>
+</ol>
+</li>
+</ol>
+<hr />
+<h3 id="采购管理"><a class="markdownIt-Anchor" href="#采购管理"></a> 采购管理</h3>
+<ol>
+<li>
+<p>采购管理中存在的问题</p>
+<ol>
+<li>没有做好规划采购工作，未制定合理的采购管理计划，供方选择标准等</li>
+<li>没有编写采购工作说明书，未提前列明采购货物的质量等级，标准要求等</li>
+<li>在实施采购的过程中，仅仅依靠价格就选择卖方，没有综合评价卖方综合情况，采购流程制度不规范</li>
+<li>采购过程项目经理不重视采购管理，没有说明采购备件的要求，没有参与采购监管</li>
+<li>未将项目的进度和采购货物的时间进行综合考虑</li>
+<li>库存规划不合理，库存管理混乱</li>
+<li>未及时做好货物验收工作</li>
+<li>未做好控制采购工作，应该及时监控卖方绩效，有问题要及时纠偏，而不是等到临近交货或者交货时才发现问题</li>
+<li>未记录好采购过程中的相关采购文档和往来凭证，出问题难以找证据</li>
+<li>可能未在合同中规定交付验收标准，要求或者规定不合理，导致各种争议</li>
+<li>合同中未规定交付验收标准，无法进行有效的合同管理</li>
+<li>沟通存在问题，应充分做好会前准备工作，做好会议引导</li>
+</ol>
+</li>
+<li>
+<p>一般的采购步骤为</p>
+<ol>
+<li>准备采购工作说明书（SOW）或者工作大纲（TOR）</li>
+<li>准备高层级的成本估算，制定预算</li>
+<li>发布招标广告</li>
+<li>确定合格卖方的名单</li>
+<li>准备并发布招标文件</li>
+<li>由卖方准备并提交建议书</li>
+<li>对建议书开展技术（质量）评估</li>
+<li>对建议书开展成本评估</li>
+<li>准备最终的综合评估报告（包括质量和成本），选出中标建议书；四谈判结束后，买方和卖方签订合同</li>
+</ol>
+</li>
+<li>
+<p>招标文件：信息邀请书，报价邀请书，建议邀请书，或其他适当的采购文件</p>
+</li>
+<li>
+<p>采购管理过程包括：规划采购管理，实施采购，控制采购</p>
+</li>
+<li>
+<p>以项目范围为标准划分：可以将合同划分为项目总承包合同，项目单项承包合同，项目分包合同</p>
+</li>
+<li>
+<p>以项目付款方式划分：可以把合同分为两大类，即总价合同和成本补偿合同，还有混合型的工料合同</p>
+</li>
+<li>
+<p>总价合同：固定总价合同（FFP）；总价加激励费用合同（FPIF）；总价加经济价格调整合同（FPEPA）；订购单（单边合同）</p>
+</li>
+<li>
+<p>成本补偿合同：成本加固定费用合同（CPFF）；成本加激励合同（CPIF）；成本加奖励合同（CPAF）</p>
+</li>
+<li>
+<p>合同管理包括：合同的签订管理，合同的履行管理，合同的变更管理，合同的档案管理，合同违约索赔管理</p>
+</li>
+<li>
+<p>索赔的流程：提出索赔要求；报送索赔资料；监理工程师答复；索赔认可；持续索赔；仲裁和诉讼；</p>
+</li>
+<li>
+<p>政府的采购方式有哪些：公开招标；邀请招标；竞争性谈判；单一来源采购；询价；其他</p>
+</li>
+</ol>
+<hr />
+<h3 id="配置管理"><a class="markdownIt-Anchor" href="#配置管理"></a> 配置管理</h3>
+<ol>
+<li>
+<p>配置管理可能出现的问题</p>
+<ol>
+<li>未建立配置管理系统和机制，配置管理混乱</li>
+<li>未设置专门的配置管理员，对配置进行综合管理</li>
+<li>没有做好整体版本控制</li>
+<li>没有建立基线，导致需求，设计，编码无法对应</li>
+<li>没有做好变更管理</li>
+<li>缺乏项目整体管理的权衡</li>
+<li>缺乏各种单元测试和集成测试</li>
+<li>配置管理，人员经验不足</li>
+<li>对配置管理工具没有进行有效的评估</li>
+<li>未进行配置工具使用及配置管理的培训</li>
+<li>未制定配置管理计划</li>
+<li>未建立配置管理机制及权限管理，配置管理比较混乱</li>
+<li>没有定义配置管理流程</li>
+</ol>
+</li>
+<li>
+<p>配置管理问题的应对措施（如何做好配置管理）</p>
+<ol>
+<li>组织配置管理委员会，必要时加强对配置人员的培训或者引进有经验的人员</li>
+<li>引进配置管理工具并进行有效评估</li>
+<li>制定有效的配置管理计划</li>
+<li>建立配置管理机制，严格进行权限管理</li>
+<li>做好配置工作，包括识别配置项，建立基础，做好版本管理等</li>
+<li>定义合理的配置管理流程，制定合理的变更控制流程</li>
+<li>识别配置项，并为配置项建立唯一标识，保证其可溯源</li>
+<li>建立配置基线，使重要的配置项处于受控状态</li>
+<li>定期提交配置状态报告，改进配置管理方法</li>
+</ol>
+</li>
+<li>
+<p>配置管理包含六个活动</p>
+<ol>
+<li>制定配置管理计划</li>
+<li>配置项识别</li>
+<li>配置项控制</li>
+<li>配置状态报告</li>
+<li>配置审计</li>
+<li>配置管理回顾与改进</li>
+</ol>
+</li>
+<li>
+<p>典型配置项包含项目计划书、技术解决方案、需求文档、设计文档、源代码、可执行代码、测试用例、运行软件所需的各种数据，设备型号和关键部件等，它们经过评审和检查通过后进入软件配置管理</p>
+</li>
+<li>
+<p>配置项的三种状态：草稿，正式发布和正在修改</p>
+</li>
+<li>
+<p>配置库可以分为开发库（动态库），受控库（主库）和产品库（静态库）</p>
+</li>
+<li>
+<p>配置库的建库模式有两种：按配置项类型建库；按任务建库</p>
+<ol>
+<li>按配置项类型建库：适用于通用软件的开发组织。产品的继承性较强，工具比较统一，对并行开发有一定的需求，使用这样的库结构有利于对配置项的统一管理和控制，提高编译和发布的效率；</li>
+<li>按开发任务建立对应的配置库：适用于专业软件的开发组织，使用开发工具种类繁多，开发模式以线性发展为主，所以没有必要把配置项严格分类存储。人为的增加目录的复杂性。对于研发性软件组织而言，这种设置策略比较灵活。</li>
+</ol>
+</li>
+<li>
+<p>在软件升级过程中，配置库的变更控制流程</p>
+<ol>
+<li>将待升级的基线从产品库中取出，放入受控库</li>
+<li>程序员将欲修改的代码段从受控库中检出，放入自己的开发库中进行修改，代码检出后即被锁定，保证同一段代码同时被一个程序员修改。</li>
+<li>程序员将开发库中修改好的代码检入受控库，检入后，代码的锁定状态被解除，其他程序员可以检出这段代码。</li>
+<li>软件的升级工作全部完成后，将受控库的新基线存入产品库中。</li>
+</ol>
+</li>
+<li>
+<p>配置管理数据库的主要内容包括</p>
+<ol>
+<li>发布内容，包括每个配置项及其版本号</li>
+<li>经批准的变更可能影响到的配置项</li>
+<li>与某个配置项有关的所有变更请求</li>
+<li>配置项变更轨迹</li>
+<li>特定的设备和软件</li>
+<li>计划升级、替换或弃用的配置项</li>
+<li>与配置项有关的变更和问题</li>
+<li>来自特定时期特定供应商的配置项</li>
+<li>受问题影响的所有配置项</li>
+</ol>
+</li>
+<li>
+<p>功能配置审计</p>
+<ol>
+<li>
+<p>功能审计是审计配置项的一致性（实际功效是否一致）</p>
+<p>配置项开发圆满完成</p>
+<p>配置项已达到配置标识中规定的性能和功能特征</p>
+<p>配置项的操作和支持文档已完成并且符合要求的</p>
+</li>
+<li>
+<p>物理配置审计是审计配置项的完整性</p>
+<p>要交付的配置项是否存在</p>
+<p>配置项中是否包含了所有必须得项目</p>
+</li>
+</ol>
+</li>
+</ol>
+<hr />
+<h3 id="变更管理"><a class="markdownIt-Anchor" href="#变更管理"></a> 变更管理</h3>
+<ol>
+<li>
+<p>变更管理可能出现的问题</p>
+<ol>
+<li>未提交书面变更申请</li>
+<li>变更控制委员会组成成员不合理，应该包括客户代表，最好是高级管理人员，并明确分工</li>
+<li>几乎所有的变更控制都被批准和接受，说明CCB没有严格控制项目变更申请的提交，没有认真审核</li>
+<li>应该对变更因素施加影响，积极沟通，确认变更的必要性</li>
+<li>没有进行变更后的评审，对变更造成的影响没有进行分析</li>
+<li>没有将变更可能造成的影响告诉变更提出方或对应的干系人</li>
+<li>没有严格按照变更控制流程进行变更管理</li>
+<li>没有对变更做记录并形成文档，造成变更内容无法追溯</li>
+<li>变更批准后，没有及时更新相应的项目计划和文件，导致内容不一致，变更结果没有进行正式的验证，没有得到客户的确认</li>
+<li>是否接受或者拒绝变更，不能由项目经理一个人确定</li>
+<li>项目变更后没有相应的变更合同</li>
+</ol>
+</li>
+<li>
+<p>变更问题应对</p>
+<ol>
+<li>邀请客户的代表，相关业务领导和高层领导等加入变更控制委员会</li>
+<li>对变更施加影响，确认变更的必要性，积极同干系人进行沟通</li>
+<li>对变更进行评审论证，确定变更的信息完整，实际可行</li>
+<li>分析变更造成的进度，成本，质量等方面的影响，并告知相关人员</li>
+<li>要对变更的实施进行监控跟踪，记录变更信息并形成文档，以便追溯</li>
+<li>要对变更的效果进行评估</li>
+<li>严格按照变更控制流程进行变更管理，对于不必要的变更申请拒绝，确保批准的变更的有效性</li>
+<li>变更应进行严格验证，并得到相关干系人的确认</li>
+</ol>
+</li>
+<li>
+<p>变更的流程：变更申请，对变更的初审，变更方案论证，变更审查，发出通知并实施，实施监控，效果评估，变更收尾</p>
+</li>
+<li>
+<p>变更的决策机构是CCB，成员由涉及的多方成员构成，通常包括客户和实施方的决策成员。CCB的工作是通过评审手段来决定项目基准是否能变更，但不提供变更方案</p>
+</li>
+<li>
+<p>变更管理负责人也称作变更经理，通常是变更管理过程解决方案的负责人，其主要职责是</p>
+<ol>
+<li>负责整个变更过程方案的结果</li>
+<li>负责变更管理过程的监控</li>
+<li>负责协调相关的资源，保障所有变更按照预定义过程顺利运作</li>
+<li>确定变更类型，组织变更计划和日程安排</li>
+<li>管理变更的日程安排</li>
+<li>变更实施完成后的回顾和关闭</li>
+<li>承担变更相关责任，并具有相应的权限</li>
+<li>可能以逐级审批形式或团队会议的形式参与变更风险评估和审批</li>
+</ol>
+</li>
+<li>
+<p>变更涉及的人员和职责</p>
+<ol>
+<li>涉及人员：项目经理和CCB，变更管理负责人，变更请求者，变更实施者，变更顾问委员会</li>
+</ol>
+</li>
+</ol>
+<hr />
+<p>‍</p>
+<h3 id="8大绩效域"><a class="markdownIt-Anchor" href="#8大绩效域"></a> 8大绩效域</h3>
+<ol>
+<li>
+<p><mark>干</mark>系人，<mark>团</mark>队，<mark>开</mark>发方法和生命周期，规划，项目<mark>工</mark>作，<mark>交</mark>付，<mark>测</mark>量，<mark>不</mark>确定性</p>
+<p>团干部策划开公交</p>
+</li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://cn-vhql.github.io">vhql</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://cn-vhql.github.io/2024/04/16/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/">https://cn-vhql.github.io/2024/04/16/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://cn-vhql.github.io" target="_blank">归去来兮</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/">项目管理</a></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024/04/02/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/" title="项目管理笔记"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">项目管理笔记</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2023/10/11/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E8%AE%A1%E7%AE%97%E9%A2%98/" title="项目管理计算题"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-10-11</div><div class="title">项目管理计算题</div></div></a></div><div><a href="/2024/04/02/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/" title="项目管理笔记"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-04-02</div><div class="title">项目管理笔记</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">vhql</div><div class="author-info__description">悟已往之不谏，知来者之可追</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">28</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/cn-vhql"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">实迷途其未远，觉今是而昨非</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%87%E9%87%91%E6%B2%B9"><span class="toc-number">1.</span> <span class="toc-text"> 万金油</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AB%8B%E9%A1%B9%E7%AE%A1%E7%90%86"><span class="toc-number">2.</span> <span class="toc-text"> 立项管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B4%E5%90%88%E7%AE%A1%E7%90%86"><span class="toc-number">3.</span> <span class="toc-text"> 整合管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8C%83%E5%9B%B4%E7%AE%A1%E7%90%86"><span class="toc-number">4.</span> <span class="toc-text"> 范围管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E5%BA%A6%E7%AE%A1%E7%90%86"><span class="toc-number">5.</span> <span class="toc-text"> 进度管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%90%E6%9C%AC%E7%AE%A1%E7%90%86"><span class="toc-number">6.</span> <span class="toc-text"> 成本管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B4%A8%E9%87%8F%E7%AE%A1%E7%90%86"><span class="toc-number">7.</span> <span class="toc-text"> 质量管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86"><span class="toc-number">8.</span> <span class="toc-text"> 资源管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B2%9F%E9%80%9A%E7%AE%A1%E7%90%86-%E5%B9%B2%E7%B3%BB%E4%BA%BA%E7%AE%A1%E7%90%86"><span class="toc-number">9.</span> <span class="toc-text"> 沟通管理、干系人管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86"><span class="toc-number">10.</span> <span class="toc-text"> 风险管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%87%E8%B4%AD%E7%AE%A1%E7%90%86"><span class="toc-number">11.</span> <span class="toc-text"> 采购管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86"><span class="toc-number">12.</span> <span class="toc-text"> 配置管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E6%9B%B4%E7%AE%A1%E7%90%86"><span class="toc-number">13.</span> <span class="toc-text"> 变更管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8%E5%A4%A7%E7%BB%A9%E6%95%88%E5%9F%9F"><span class="toc-number">14.</span> <span class="toc-text"> 8大绩效域</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/04/16/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/" title="项目管理案例分析">项目管理案例分析</a><time datetime="2024-04-16T08:08:52.000Z" title="发表于 2024-04-16 16:08:52">2024-04-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/04/02/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/" title="项目管理笔记">项目管理笔记</a><time datetime="2024-04-02T14:08:03.000Z" title="发表于 2024-04-02 22:08:03">2024-04-02</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/10/%E6%9C%9F%E8%B4%A7%E5%8F%8A%E8%A1%8D%E7%94%9F%E5%93%81%E5%88%86%E6%9E%90%E4%B8%8E%E5%BA%94%E7%94%A8/" title="期货及衍生品分析与应用">期货及衍生品分析与应用</a><time datetime="2024-03-10T13:07:21.000Z" title="发表于 2024-03-10 21:07:21">2024-03-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/02/12/%E4%BA%BA%E7%B1%BB%E7%81%AD%E7%BB%9D/" title="人类灭绝">人类灭绝</a><time datetime="2024-02-12T04:19:37.000Z" title="发表于 2024-02-12 12:19:37">2024-02-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/10/11/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E8%AE%A1%E7%AE%97%E9%A2%98/" title="项目管理计算题">项目管理计算题</a><time datetime="2023-10-11T01:03:22.000Z" title="发表于 2023-10-11 09:03:22">2023-10-11</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By vhql</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, '']
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typesetPromise()
+}</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
